@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ln -sf /usr/share/zoneinfo/Europe/Paris /etc/localtime
-hwclock --systohc
+hwclock --systohc --localtime
 sed -i '177s/.//' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
